@@ -3,117 +3,76 @@ package com.britenet.universoeportalswagger.model;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
-@ApiModel(description = "This model contains all details about CardInfo. ")
-public class card {
+
+@ApiModel(description = "This model contains all details about contactForm. ")
+public class consents {
+	@ApiModelProperty(notes = "Information if this consent is approved")
+	private boolean SFS1;
 	
-	@ApiModelProperty(notes = "This field will gives you the value of Card BIN")
-	private String cardBIN;
+	@ApiModelProperty(notes = "Information if this consent is approved")
+	private boolean SFS2;
 	
-	@ApiModelProperty(notes = "This field will gives you the vaue of Card brand")
-	private String cardBrand;
+	@ApiModelProperty(notes = "Information if this consent is approved")
+    private boolean SFS3;
 	
-	@ApiModelProperty(notes = "This field will gives you the value of cardHolderName")
-    private String cardHolderName;
-	
-	@ApiModelProperty(notes = "This field will gives you the value of Valid NIF number 9 digits")
-	private String cardHolderNIF;
-	
-	
-	@ApiModelProperty(notes = "This field will gives you the value of cardIdentifier")
-	private String cardIdentifier;
-	
-	@ApiModelProperty(notes = "This field will gives you the value of cardStatus")
-	private String cardStatus;
+	@ApiModelProperty(notes = "Information if this consent is approved")
+	private boolean BNP1;
 	
 	
-	@ApiModelProperty(notes = "This field will gives you the vaue of cardNumber")
-	private String cardNumber;
-	
-	@ApiModelProperty(notes = "This field will gives you the value of Card expiry date")
-	private String expiryDate;
-	
-	@ApiModelProperty(notes = "This field will gives you the value of Card registra-tion date")
-	private String registrationDate;
+	@ApiModelProperty(notes = "Information if this consent is approved")
+	private boolean BNP2;
 
-	public String getCardBIN() {
-		return cardBIN;
+
+	public boolean isSFS1() {
+		return SFS1;
 	}
 
-	public void setCardBIN(String cardBIN) {
-		this.cardBIN = cardBIN;
+
+	public void setSFS1(boolean sFS1) {
+		SFS1 = sFS1;
 	}
 
-	public String getCardBrand() {
-		return cardBrand;
+
+	public boolean isSFS2() {
+		return SFS2;
 	}
 
-	public void setCardBrand(String cardBrand) {
-		this.cardBrand = cardBrand;
+
+	public void setSFS2(boolean sFS2) {
+		SFS2 = sFS2;
 	}
 
-	public String getCardHolderName() {
-		return cardHolderName;
+
+	public boolean isSFS3() {
+		return SFS3;
 	}
 
-	public void setCardHolderName(String cardHolderName) {
-		this.cardHolderName = cardHolderName;
+
+	public void setSFS3(boolean sFS3) {
+		SFS3 = sFS3;
 	}
 
-	public String getCardHolderNIF() {
-		return cardHolderNIF;
+
+	public boolean isBNP1() {
+		return BNP1;
 	}
 
-	public void setCardHolderNIF(String cardHolderNIF) {
-		this.cardHolderNIF = cardHolderNIF;
+
+	public void setBNP1(boolean bNP1) {
+		BNP1 = bNP1;
 	}
 
-	public String getCardIdentifier() {
-		return cardIdentifier;
+
+	public boolean isBNP2() {
+		return BNP2;
 	}
 
-	public void setCardIdentifier(String cardIdentifier) {
-		this.cardIdentifier = cardIdentifier;
-	}
 
-	public String getCardStatus() {
-		return cardStatus;
-	}
-
-	public void setCardStatus(String cardStatus) {
-		this.cardStatus = cardStatus;
-	}
-
-	public String getCardNumber() {
-		return cardNumber;
-	}
-
-	public void setCardNumber(String cardNumber) {
-		this.cardNumber = cardNumber;
-	}
-
-	public String getExpiryDate() {
-		return expiryDate;
-	}
-
-	public void setExpiryDate(String expiryDate) {
-		this.expiryDate = expiryDate;
-	}
-
-	public String getRegistrationDate() {
-		return registrationDate;
-	}
-
-	public void setRegistrationDate(String registrationDate) {
-		this.registrationDate = registrationDate;
+	public void setBNP2(boolean bNP2) {
+		BNP2 = bNP2;
 	}
 	
 	
 	
 	
-	
-	
-	
-	
-
-
 }
