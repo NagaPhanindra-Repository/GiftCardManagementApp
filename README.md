@@ -1,78 +1,146 @@
 package com.britenet.universoeportalswagger.model;
-
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 
 @ApiModel(description = "This model contains all details about contactForm. ")
-public class consents {
-	@ApiModelProperty(notes = "Information if this consent is approved")
-	private boolean SFS1;
+public class contactForm {
 	
-	@ApiModelProperty(notes = "Information if this consent is approved")
-	private boolean SFS2;
+	@ApiModelProperty(notes = "This field will gives you the lista Constant Value")
+	private String lista;
 	
-	@ApiModelProperty(notes = "Information if this consent is approved")
-    private boolean SFS3;
-	
-	@ApiModelProperty(notes = "Information if this consent is approved")
-	private boolean BNP1;
+	@ApiModelProperty(notes = "This field will gives you the Form client id. Constant Value")
+	private String cliente;
 	
 	
-	@ApiModelProperty(notes = "Information if this consent is approved")
-	private boolean BNP2;
+	@ApiModelProperty(notes = "This field will gives you the Constant Value lang")
+	private String lang;
+	
+	@ApiModelProperty(notes = "This field will gives you the formid value")
+	private String formid;
+	
+	@ApiModelProperty(notes = "This field will gives you the First name value")
+	private String fname_77;
+	
+	@ApiModelProperty(notes = "This field will gives you the Last name")
+	private String lname_78;
+	
+	
+	@ApiModelProperty(notes = "This field will gives you the Client number")
+	private String campoe_27_79;
+	
+	@ApiModelProperty(notes = "This field will gives you the Email value")
+	private String email_75;
+	
+	@ApiModelProperty(notes = "This field will gives you the Tel. country code ")
+	private String ind_telemovel_76;
+	
+	@ApiModelProperty(notes = "This field will gives you the Mobile phone")
+	private String telemovel_76_numero;
+	
+	
+	@ApiModelProperty(notes = "This field will gives you the Subject id See Message subject list below")
+	private String campoe_31_81;
+	
+	@ApiModelProperty(notes = "This field will gives you the Message value")
+	private String campoe_29_80;
 
-
-	public boolean isSFS1() {
-		return SFS1;
+	public String getLista() {
+		return lista;
 	}
 
-
-	public void setSFS1(boolean sFS1) {
-		SFS1 = sFS1;
+	public void setLista(String lista) {
+		this.lista = lista;
 	}
 
-
-	public boolean isSFS2() {
-		return SFS2;
+	public String getCliente() {
+		return cliente;
 	}
 
-
-	public void setSFS2(boolean sFS2) {
-		SFS2 = sFS2;
+	public void setCliente(String cliente) {
+		this.cliente = cliente;
 	}
 
-
-	public boolean isSFS3() {
-		return SFS3;
+	public String getLang() {
+		return lang;
 	}
 
-
-	public void setSFS3(boolean sFS3) {
-		SFS3 = sFS3;
+	public void setLang(String lang) {
+		this.lang = lang;
 	}
 
-
-	public boolean isBNP1() {
-		return BNP1;
+	public String getFormid() {
+		return formid;
 	}
 
-
-	public void setBNP1(boolean bNP1) {
-		BNP1 = bNP1;
+	public void setFormid(String formid) {
+		this.formid = formid;
 	}
 
-
-	public boolean isBNP2() {
-		return BNP2;
+	public String getFname_77() {
+		return fname_77;
 	}
 
+	public void setFname_77(String fname_77) {
+		this.fname_77 = fname_77;
+	}
 
-	public void setBNP2(boolean bNP2) {
-		BNP2 = bNP2;
+	public String getLname_78() {
+		return lname_78;
+	}
+
+	public void setLname_78(String lname_78) {
+		this.lname_78 = lname_78;
+	}
+
+	public String getCampoe_27_79() {
+		return campoe_27_79;
+	}
+
+	public void setCampoe_27_79(String campoe_27_79) {
+		this.campoe_27_79 = campoe_27_79;
+	}
+
+	public String getEmail_75() {
+		return email_75;
+	}
+
+	public void setEmail_75(String email_75) {
+		this.email_75 = email_75;
+	}
+
+	public String getInd_telemovel_76() {
+		return ind_telemovel_76;
+	}
+
+	public void setInd_telemovel_76(String ind_telemovel_76) {
+		this.ind_telemovel_76 = ind_telemovel_76;
+	}
+
+	public String getTelemovel_76_numero() {
+		return telemovel_76_numero;
+	}
+
+	public void setTelemovel_76_numero(String telemovel_76_numero) {
+		this.telemovel_76_numero = telemovel_76_numero;
+	}
+
+	public String getCampoe_31_81() {
+		return campoe_31_81;
+	}
+
+	public void setCampoe_31_81(String campoe_31_81) {
+		this.campoe_31_81 = campoe_31_81;
+	}
+
+	public String getCampoe_29_80() {
+		return campoe_29_80;
+	}
+
+	public void setCampoe_29_80(String campoe_29_80) {
+		this.campoe_29_80 = campoe_29_80;
 	}
 	
 	
-	
-	
+
 }
