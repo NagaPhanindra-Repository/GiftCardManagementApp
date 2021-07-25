@@ -1,24 +1,62 @@
 # GiftCardManagementApp
 Spring Boot Micro service with Angular App
 	
-	@CrossOrigin(origins = "*")
+	import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.atomic.AtomicLong;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.actuate.health.Health;
+import org.springframework.context.annotation.Bean;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.mastercard.giftcard.model.CardUser;
+import com.mastercard.giftcard.model.cardUserTransactions;
+import com.mastercard.giftcard.service.ApplicationHealthIndicator;
+import com.mastercard.giftcard.service.UserTransactionService;
+
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/GiftCardManagement/api/v1")
-public class BasicAuthController {
+public class UserLoginController {
+	  
+	UserTransactionService userService=new UserTransactionService();
 	
-	@GetMapping(path = "/basicauth")
-    public AuthenticationBean basicauth() {
-		System.out.println("You are authenticated");
-        return new AuthenticationBean("You are authenticated");
+	@Autowired
+	ApplicationHealthIndicator healthIndicator;
+	   
+    @GetMapping("/LastFiftyTransactions")		   
+    public List<cardUserTransactions> getTransactions() {
+    	
+    	
+    	return   userService.getLastFiftyTransactions();
     }
-	@GetMapping(path = "/cardUserDeatils")
-    public CardUser cardUserDeatils() {
-		UserTransactionService trasactionService=new UserTransactionService();
-		System.out.println("getCardUserdetails"+trasactionService.getCardUserdetails().getCardNumber());
-		CardUser CurrentUser=trasactionService.getCardUserdetails();
-		return CurrentUser;
-		
+    
+    @GetMapping("/Transactions")		   
+    public List<cardUserTransactions> getTransactionsd() {
+    	
+    	
+    	return   userService.getAllTransactions();
     }
-	
+    
+    @GetMapping("/CurrentTransactions")		   
+    public List<cardUserTransactions> getCurrentTransactions() {
+    	
+    	
+    	return   userService.getCurrentTransactions();
+    }
+
+    @GetMapping("/HealthStatus")		   
+    public Health getApplicationHealthStatus() {
+    	System.out.println("################Health##########");
+    	
+    	return   healthIndicator.health();
+    }   
+	    
+
 
 }
